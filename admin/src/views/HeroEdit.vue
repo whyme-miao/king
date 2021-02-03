@@ -141,6 +141,32 @@
                         </el-col>
                     </el-row>
                 </el-tab-pane>
+
+                <el-tab-pane label="被谁克制" name="restrained">
+                    <el-button size="small" @click="model.restrained.push({})">
+                        <i class="el-icon-plus"></i> 添加克制
+                    </el-button>
+                    <el-row type="flex" style="flex-wrap: wrap">
+                        <el-col :md="12" v-for="(item, i) in model.restrained" :key="i">
+                        <el-form-item label="英雄">
+                            <el-select filterable v-model="item.hero">
+                            <el-option 
+                            v-for="hero in heroes"
+                            :key="hero._id"
+                            :value="hero._id"
+                            :label="hero.name"
+                            ></el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item label="描述">
+                            <el-input v-model="item.description" type="textarea"></el-input>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button size="small" type="danger" @click="model.restrained.splice(i, 1)">删除</el-button>
+                        </el-form-item>
+                        </el-col>
+                    </el-row>
+                </el-tab-pane>
             </el-tabs>
             <el-form-item style="margin-top: 1rem;">
                 <el-button type="primary" native-type="submit">保存</el-button>
@@ -168,6 +194,7 @@ export default {
                 },
                 skills: [],
                 partners: [],
+                restrained: []
             },
             
         }

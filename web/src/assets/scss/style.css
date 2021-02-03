@@ -39,12 +39,52 @@ p {
   background: #fff;
 }
 
+.text-white-1 {
+  color: #fcfcfc;
+}
+
+.bg-white-1 {
+  background: #fcfcfc;
+}
+
+.text-white-2 {
+  color: #eceef0;
+}
+
+.bg-white-2 {
+  background: #eceef0;
+}
+
 .text-info {
   color: #4b67af;
 }
 
 .bg-info {
   background: #4b67af;
+}
+
+.text-blue {
+  color: #4394e4;
+}
+
+.bg-blue {
+  background: #4394e4;
+}
+
+.text-danger {
+  color: #791a15;
+}
+
+.bg-danger {
+  background: #791a15;
+}
+
+.text-blue-1 {
+  color: #1f3695;
+}
+
+.bg-blue-1 {
+  background: #1f3695;
 }
 
 .text-light {
@@ -577,6 +617,24 @@ p {
   padding: 0.2rem 0.6rem;
 }
 
+.btn.btn-lg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fcfcfc;
+  border: 1px solid #eceef0;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.btn.btn-lg i {
+  color: #db9e3f;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
 .nav {
   display: flex;
 }
@@ -609,6 +667,60 @@ p {
   width: 1.7692rem;
   height: 1.5385rem;
   background-position: 63.546% 15.517%;
+}
+
+.sprite.sprite-book {
+  width: 1.7692rem;
+  height: 1.5385rem;
+  background-position: 90.483% 15.614%;
+}
+
+.sprite.sprite-shop {
+  width: 1.4615rem;
+  height: 1.6923rem;
+  background-position: 36.746% 0.924%;
+}
+
+.sprite.sprite-shopp {
+  width: 1.5385rem;
+  height: 1.5385rem;
+  background-position: 10.408% 15.517%;
+}
+
+.sprite.sprite-1 {
+  width: 1.5385rem;
+  height: 1.6154rem;
+  background-position: 89.733% 1.266%;
+}
+
+.sprite.sprite-2 {
+  width: 1.8462rem;
+  height: 1.5385rem;
+  background-position: 36.467% 15.287%;
+}
+
+.sprite.sprite-3 {
+  width: 1.8462rem;
+  height: 1.8462rem;
+  background-position: 63.3% 0.927%;
+}
+
+.sprite.sprite-4 {
+  width: 1.8462rem;
+  height: 1.5385rem;
+  background-position: 0 96.207%;
+}
+
+.sprite.sprite-5 {
+  width: 1.7692rem;
+  height: 1.5385rem;
+  background-position: 63.546% 15.517%;
+}
+
+.sprite.sprite-6 {
+  width: 2rem;
+  height: 1.6154rem;
+  background-position: 9.728% 1.266%;
 }
 
 .sprite.sprite-arrow {

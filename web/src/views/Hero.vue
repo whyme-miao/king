@@ -34,6 +34,118 @@
                 </div>
            </div>
         </div>
+        <!-- end of top -->
+
+        <div>
+            <div class="bg-white px-3">
+                <!-- 菜单部分 -->
+                <div class="nav d-flex jc-around pt-3 pb-2 border-bottom">
+                    <div class="nav-item active">
+                        <div class="nav-link">初识英雄</div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="nav-link">进阶攻略</div>
+                    </div>
+                </div>
+            </div>
+            <!-- 内容部分 -->
+            <swiper>
+                <swiper-slide>
+                    <div>
+                        <!-- 技能模块 -->
+                        <div class="p-3 bg-white border-bottom">
+                            <!-- btn -->
+                            <div class="d-flex">
+                                <router-link tag="button" to="/" class="btn btn-lg flex-1">
+                                    <i class="iconfont icon-bofang"></i>
+                                    英雄介绍视频
+                                </router-link>
+                                <router-link tag="button" to="/" class="btn btn-lg flex-1 ml-2">
+                                    <i class="iconfont icon-image"></i>
+                                   进阶攻略
+                                </router-link>
+                            </div>
+                            <!-- skills -->
+                            <div class="skills bg-white mt-4">
+                                <!-- icon -->
+                                <div class="d-flex jc-around">
+                                    <img 
+                                    class="icon"
+                                    @click="currentSkillIndex = i"
+                                    :class="{active: currentSkillIndex === i}"
+                                    :src="item.icon"
+                                    v-for="(item, i) in model.skills"
+                                    :key="item.name" 
+                                    />
+                                </div>
+                                <!-- content -->
+                                <div v-if="currentSkill">
+                                    <div class="d-flex pt-4 p   b-3" >
+                                        <h3 class="m-0">{{currentSkill.name}}</h3>
+                                        <span class="ml-4 text-grey-1">
+                                            (冷却值：{{currentSkill.delay}} 消耗：{{currentSkill.cost}})
+                                        </span>
+                                    </div>
+                                    <p>{{currentSkill.description}}</p>
+                                    <div class="border-bottom "></div>
+                                    <p>
+                                        小提示：{{currentSkill.tips}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 出装推荐模块 -->
+                        <m-card plain icon="Menu" title="出装推荐" class="hero-items">
+                            <div class="fs-xl">顺风出装</div>
+                            <div class="d-flex jc-around text-center mt-3">
+                                <div v-for="item in model.item1" :key="item.name">
+                                    <img :src="item.icon" alt="" class="icon">
+                                    <div class="fs-xs">{{item.name}}</div>
+                                </div>
+                            </div>
+                            <div class="border-bottom mt-3"></div>
+                            <div class="fs-xl mt-3">逆风出装</div>
+                            <div class="d-flex jc-around text-center mt-3">
+                                <div v-for="item in model.item2" :key="item.name">
+                                    <img :src="item.icon" alt="" class="icon">
+                                    <div class="fs-xs">{{item.name}}</div>
+                                </div>
+                            </div>
+                        </m-card>
+
+                        <m-card plain icon="Menu" title="使用技巧">
+                            <p class="m-0">{{model.usageTips}}</p>
+                        </m-card>
+
+                        <m-card plain icon="Menu" title="对抗技巧">
+                            <p class="m-0">{{model.battleTips}}</p>
+                        </m-card>
+
+                        <m-card plain icon="Menu" title="团战思路">
+                            <p class="m-0">{{model.teamTips}}</p>
+                        </m-card>
+
+                        <m-card plain icon="Menu" title="英雄关系">
+                            <div class="fs-xl">最佳搭档</div>
+                            <div class="d-flex pt-3" v-for="item in model.partners" :key="item">
+                                <img :src="item.hero.avatar" alt="" height="50">
+                                <p class="m-0 ml-3 flex-1">{{item.description}}</p>
+                            </div>
+                            <div class="border-bottom my-3"></div>
+
+                            <div class="fs-xl">被谁克制</div>
+                            <div class="d-flex pt-3" v-for="item in model.restrained" :key="item">
+                                <img :src="item.hero.avatar" alt="" height="50">
+                                <p class="m-0 ml-3 flex-1">{{item.description}}</p>
+                            </div>
+                            <div class="border-bottom mt-3"></div>
+                        </m-card>
+                        
+                    </div>
+                </swiper-slide>
+                <swiper-slide></swiper-slide>
+            </swiper>
+        </div>
     </div>
 </template>
 
@@ -44,7 +156,13 @@ export default {
     },
     data() {
         return {
-            model: null
+            model: null,
+            currentSkillIndex: 0
+        }
+    },
+    computed: {
+        currentSkill() {
+            return this.model.skills[this.currentSkillIndex]
         }
     },
     methods: {
@@ -61,6 +179,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/scss/_variables.scss';
 .page-hero {
     .top {
         height: 50vw;
@@ -83,6 +202,28 @@ export default {
             }
         }
     }
+    // 技能部分
+    .skills {
+        img.icon {
+            width: 70px;
+            height: 70px;
+            border: 3px solid map-get($colors, 'white');
+            &.active {
+                border-color: map-get($colors, 'primary');
+            }
+            
+            border-radius: 45%;
+        }
+        
+    }
+    .hero-items {
+        img.icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+    }
 }
+
 
 </style>

@@ -28,6 +28,10 @@ const shema = new mongoose.Schema({
     partners: [{
         hero: { type: mongoose.SchemaTypes.ObjectId, ref: 'Hero' },
         description: { type: String }
+    }],
+    restrained: [{
+        hero: { type: mongoose.SchemaTypes.ObjectId, ref: 'Hero' },
+        description: { type: String }
     }]
 })
 

@@ -13,6 +13,13 @@
       "unicode_decimal": 58980
     },
     {
+      "icon_id": "8371465",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
       "icon_id": "9974429",
       "name": "省略号",
       "font_class": "shenglvehao",
@@ -27,11 +34,25 @@
       "unicode_decimal": 59037
     },
     {
+      "icon_id": "14445531",
+      "name": "链接",
+      "font_class": "lianjie",
+      "unicode": "e754",
+      "unicode_decimal": 59220
+    },
+    {
       "icon_id": "18900805",
       "name": "返回",
       "font_class": "fanhui",
       "unicode": "e61a",
       "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "19657962",
+      "name": "图 片",
+      "font_class": "image",
+      "unicode": "e629",
+      "unicode_decimal": 58921
     }
   ]
 }

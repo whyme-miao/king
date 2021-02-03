@@ -19,9 +19,53 @@
 
       <div class="nav-icons bg-white mt-3 text-center pt-3 text-dark-1">
         <div class="d-flex flex-wrap">
-          <div class="nav-item mb-3 mb-3 " v-for="n in 10" :key="n">
+          <div class="nav-item mb-3 mb-3 ">
             <i class="sprite sprite-news"></i>
             <div class="py-2">爆料站</div>
+          </div>
+          <div class="nav-item mb-3 mb-3 ">
+            <i class="sprite sprite-book"></i>
+            <div class="py-2">故事站</div>
+          </div>
+          <div class="nav-item mb-3 mb-3 ">
+            <i class="sprite sprite-shop"></i>
+            <div class="py-2">周边商城</div>
+          </div>
+          <div class="nav-item mb-3 mb-3 ">
+            <i class="sprite sprite-shopp"></i>
+            <div class="py-2">体验服</div>
+          </div>
+          <div class="nav-item mb-3 mb-3 ">
+            <i class="sprite sprite-1"></i>
+            <div class="py-2">新人专区</div>
+          </div>
+          <div class="nav-item mb-3 mb-3 ">
+            <i class="sprite sprite-2"></i>
+            <div class="py-2">荣耀-传承</div>
+          </div>
+          <div class="nav-item mb-3 mb-3 ">
+            <i class="sprite sprite-3"></i>
+            <div class="py-2">王者营地</div>
+          </div>
+          <div class="nav-item mb-3 mb-3 ">
+            <i class="sprite sprite-4"></i>
+            <div class="py-2">公众号</div>
+          </div>
+          <div class="nav-item mb-3 mb-3 ">
+            <i class="sprite sprite-5"></i>
+            <div class="py-2">版本介绍</div>
+          </div>
+          <div class="nav-item mb-3 mb-3 ">
+            <i class="sprite sprite-6"></i>
+            <div class="py-2">对局环境</div>
+          </div>
+          <div class="nav-item mb-3 mb-3 ">
+            <i class="sprite sprite-book"></i>
+            <div class="py-2">无限王者团</div>
+          </div>
+          <div class="nav-item mb-3 mb-3 ">
+            <i class="sprite sprite-news"></i>
+            <div class="py-2">创意互动营</div>
           </div>
         </div>
         <!-- 收起菜单 -->
@@ -95,8 +139,9 @@ export default {
             clickable: true,  //设置分页小圆点可手动点击
           }
         },
-        newsCats: [],
-        heroCats: []
+        foldIcon: false, // 控制图标区域的展开
+        newsCats: [], // 新闻数据
+        heroCats: []  // 英雄数据
     }
   },
   methods: {

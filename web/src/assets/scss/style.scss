@@ -143,6 +143,22 @@ p {
     border-radius: 0.1538rem;
     font-size: map-get($font-sizes, 'sm') * $base-font-size;
     padding: 0.2rem 0.6rem;
+    &.btn-lg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            color: map-get($colors, 'primary');
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        background: map-get($colors, 'white-1');
+        border: 1px solid map-get($colors, 'white-2');
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
 }
 
 // nav
@@ -176,6 +192,55 @@ p {
         height: 1.5385rem;
         background-position: 63.546% 15.517%;
     }
+    &.sprite-book {
+        width:  1.7692rem;
+        height:   1.5385rem;
+        background-position:  90.483% 15.614%;
+    }
+    &.sprite-shop {
+        width:  1.4615rem;
+        height:   1.6923rem;
+        background-position: 36.746% 0.924%;
+    }
+    &.sprite-shopp {
+        width:  1.5385rem;
+        height:   1.5385rem;
+        background-position: 10.408% 15.517%;
+    }
+    &.sprite-1 {
+        width:  1.5385rem;
+        height:   1.6154rem;
+        background-position: 89.733% 1.266%;
+    }
+    &.sprite-2 {
+        width:  1.8462rem;
+        height:   1.5385rem;
+        background-position: 36.467% 15.287%;
+    }
+    &.sprite-3 {
+        width:  1.8462rem;
+        height:   1.8462rem;
+        background-position: 63.3% 0.927%;
+    }
+    &.sprite-4 {
+        width:  1.8462rem;
+        height:   1.5385rem;
+        background-position: 0 96.207%;
+    }
+    &.sprite-5 {
+        width:  1.7692rem;
+        height:   1.5385rem;
+        background-position: 63.546% 15.517%;
+    }
+    &.sprite-6 {
+        width:  2rem;
+        height:  1.6154rem;
+        background-position: 9.728% 1.266%;
+    }
+
+
+
+
     &.sprite-arrow {
         width: 0.7692rem;
         height: 0.7692rem;
