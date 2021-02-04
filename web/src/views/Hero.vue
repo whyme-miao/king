@@ -98,7 +98,7 @@
                         <m-card plain icon="Menu" title="出装推荐" class="hero-items">
                             <div class="fs-xl">顺风出装</div>
                             <div class="d-flex jc-around text-center mt-3">
-                                <div v-for="item in model.item1" :key="item.name">
+                                <div v-for="item in model.item1" :key="item._id">
                                     <img :src="item.icon" alt="" class="icon">
                                     <div class="fs-xs">{{item.name}}</div>
                                 </div>
@@ -106,7 +106,7 @@
                             <div class="border-bottom mt-3"></div>
                             <div class="fs-xl mt-3">逆风出装</div>
                             <div class="d-flex jc-around text-center mt-3">
-                                <div v-for="item in model.item2" :key="item.name">
+                                <div v-for="item in model.item2" :key="item._id">
                                     <img :src="item.icon" alt="" class="icon">
                                     <div class="fs-xs">{{item.name}}</div>
                                 </div>
@@ -127,14 +127,14 @@
 
                         <m-card plain icon="Menu" title="英雄关系">
                             <div class="fs-xl">最佳搭档</div>
-                            <div class="d-flex pt-3" v-for="item in model.partners" :key="item">
+                            <div class="d-flex pt-3" v-for="(item,i) in model.partners" :key="i">
                                 <img :src="item.hero.avatar" alt="" height="50">
                                 <p class="m-0 ml-3 flex-1">{{item.description}}</p>
                             </div>
                             <div class="border-bottom my-3"></div>
 
                             <div class="fs-xl">被谁克制</div>
-                            <div class="d-flex pt-3" v-for="item in model.restrained" :key="item">
+                            <div class="d-flex pt-3" v-for="item in model.restrained" :key="item._id">
                                 <img :src="item.hero.avatar" alt="" height="50">
                                 <p class="m-0 ml-3 flex-1">{{item.description}}</p>
                             </div>

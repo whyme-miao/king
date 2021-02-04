@@ -6,6 +6,11 @@ const app = express()
 // 设置全局变量，用于token
 app.set('secret', 'dddldjslfj')
 
+// 后台静态文件
+app.use('/admin', express.static(__dirname + '/admin')) //静态文件
+// 天台静态文件
+app.use('/', express.static(__dirname + '/web')) //静态文件
+// 图片
 app.use('/uploads', express.static(__dirname + '/uploads'))
 
 // 处理post请求参数
